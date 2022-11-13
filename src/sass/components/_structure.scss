@@ -1,0 +1,51 @@
+/* ---- General rules ---- */
+:root {
+  --tertiary: #{$tertiary};
+}
+* { box-sizing: border-box; }
+html { height: 100%; }
+body {
+  font-stretch: normal;
+  font-family: $font-family-base;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.33;
+  margin: 0;
+  background: $light-grey;
+}
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; line-height: 1.33; }
+img { max-width: 100%; }
+a {
+  outline: 0; transition: 0.3s; text-decoration: none;
+  &.url { word-break: break-all; }
+  &:hover, &:active, &:focus { }
+  &:hover, &:focus { text-decoration: underline;}
+}
+p {
+  word-wrap: break-word;
+}
+.text-break {
+  @media screen and (min-width:0\0) { word-break: break-all;}
+}
+
+// Selection Text
+::-moz-selection { color: $white; background: darken($primary, 10%); }
+::selection { color: $white; background: darken($primary, 10%); }
+
+// Container
+// $gutter: 15px;
+// .row { margin-left: -$gutter; margin-right: -$gutter; }
+// [class*="col-"]{ padding-left: $gutter; padding-right: $gutter; }
+.row-reverse {
+  @include max(sm) {
+    display: flex; flex-direction: column-reverse;
+  }
+}
+
+// Fix Google Map
+.google-map [aria-hidden] { display: block }
+
+.overflow { overflow: hidden; }
+.visually-hidden { position: absolute; opacity: 0; height: 0; width: 0; overflow: hidden;}

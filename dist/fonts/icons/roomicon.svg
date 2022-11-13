@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="roomicon" horiz-adv-x="86.66666666666666">
+    <font-face font-family="roomicon"
+      units-per-em="26" ascent="26"
+      descent="0"
+      font-weight="1001" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="angle-left"
+      unicode="&#xE001;"
+      horiz-adv-x="15.166666666666666" d="" />
+    <glyph glyph-name="angle-right"
+      unicode="&#xE002;"
+      horiz-adv-x="15.166666666666666" d="" />
+    <glyph glyph-name="arrow"
+      unicode="&#xE003;"
+      horiz-adv-x="86.66666666666666" d="M73.775 26L85.6505 14.0248333333333H85.6678333333333V14.0075L86.6666666666667 13L85.6678333333333 11.9925V11.856L85.5335 11.8581666666667L73.7728333333333 0L72.3385 1.4473333333333L82.6626666666667 11.8581666666667H0V14.0248333333333H82.7796666666667L72.3363333333333 24.5548333333333L73.775 26z" />
+    <glyph glyph-name="close"
+      unicode="&#xE004;"
+      horiz-adv-x="26" d="M23.6065 25.02L25.0205 23.607L14.4135 13L25.0205 2.393L23.6065 0.979L12.9995 11.586L2.3925 0.979L0.9795 2.393L11.5855 13L0.9795 23.607L2.3925 25.02L12.9995 14.414L23.6065 25.02z" />
+    <glyph glyph-name="hamburger"
+      unicode="&#xE005;"
+      horiz-adv-x="46.22222222222222" d="M0 26H46.2222222222222V23.1111111111111H0zM0 14.4444444444444H46.2222222222222V11.5555555555556H0zM0 2.8888888888889H46.2222222222222V0H0z" />
+  </font>
+</defs>
+</svg>

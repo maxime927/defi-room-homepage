@@ -1,0 +1,46 @@
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  background: transparent;
+  border-radius: 28px;
+  border: 2px solid;
+  font-size: rem(16px);
+  font-weight: bold;
+  min-height: $btn-height;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  white-space: normal;
+  padding: rem(13px) rem(16px) rem(11px);
+  background-image: none;
+  box-shadow: initial;
+  transition: 0.3s;
+  &:focus , &:active , &:active:focus { outline: none; box-shadow: none; }
+  &:hover { text-decoration: none;}
+
+
+  &.btn-white {
+    color: $light-red; background-color: $white; border-color: $white;
+    &:focus, &:hover, &:active:focus { background-color: $light-red-2; color: $white; border-color: $light-red-2;}
+  }
+  &.btn-outline-white {
+    border: 2px solid $white; color: $white; background-color: transparent; border-color: $white;
+    &:focus, &:hover, &:active:focus { background-color: $white; color: $light-red; }
+  }
+  &.btn-gradient {
+    color: $white; background-color: $orange; background: linear-gradient(90deg, $orange 0%, $red 100%); border-color: transparent; padding: rem(15px) rem(16px) rem(13px);
+    &:focus, &:hover, &:active:focus { background-color: $orange; border-color: transparentize($primary, 0.2);}
+  }
+  &.btn-link {
+    color: $dark-blue; background-color: transparent; border-color: transparent;
+    &:focus, &:hover, &:active:focus { background-color: transparent; border-color: transparent; }
+  }
+
+  &[disabled] {
+    pointer-events: none; opacity: 0.5;
+  }
+}
+
