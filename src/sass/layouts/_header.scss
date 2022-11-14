@@ -1,6 +1,6 @@
 /* ---- Header ---- */
 .header-wrap {
-  position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: rem(40px) 0 rem(17px); margin-bottom: rem(9px);
+  position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: rem(32px) 0 rem(17px); margin-bottom: rem(9px);
   @include min(md){ padding: rem(60px) 0 rem(30px); margin-bottom: rem(20px); }
 
   .container {
@@ -19,52 +19,50 @@
 
 // Header logo
 .header-logo {
-  float: left; width: 83px; display: block; height: 48px; display: flex; align-items: center;
-  @include min(md){ width: 100px; height: auto; }
+  width: 65px; display: block; height: 48px; margin: 0 auto; display: flex; align-items: center;
+  @include min(md){ height: auto; margin: auto; margin-left: rem(60px); margin-right: rem(20px);}
 }
 
 // Header mobile burger button
 .btn-menu {
-  position: relative; float:right; height: 35px; width: 40px; color: $black; border: none; color: $white; background-color: transparent; padding: 0;
+  position: absolute; left: 15px; top: 32px; height: 35px; width: 40px; border: none; color: $white; background-color: transparent; padding: 0;
   @include min(md){ display: none; }
 
-  i { font-size: 17px; }
+  i { font-size: 13px; }
   &.opened {
     i { @extend .icon-close; }
   }
 
   .opened & {
-    i { @extend .icon-close; font-size: rem(23px); font-weight: bold; }
+    i { @extend .icon-close; font-size: rem(23px); font-weight: bold; color: $grey; }
   }
 }
 
 // Header Nav
 .header-nav {
-  position: absolute; right: 23px; left: 23px; top: 115px; bottom: auto; border-radius: 5px; background-color: $white; transition: .5s max-height ease; transition-delay: 0s; z-index: 3;
-  // Temporary
-  max-height: 0px; overflow: hidden;
+  position: absolute; right: 100%; top: 0; width: 100vw; background-color: $white; transition: .5s all ease; transition-delay: 0s; z-index: 3; overflow: hidden; padding: rem(13px) 0 rem(21px);
 
-  @include min(md){ display: flex !important; justify-content: space-between; position: relative; flex: 1; background-color: transparent; padding: 0; width: auto; right: auto; top: auto; bottom: auto; transition: none; border-radius: 0; max-height: none;}
+  @include min(md){ display: flex !important; justify-content: space-between; position: relative; flex: 1; background-color: transparent; padding: 0; width: auto; right: auto; left: auto; top: auto; bottom: auto; transition: none; border-radius: 0; max-height: none;}
 
   &.opened {
-    z-index: 3; transition-delay: .2s; max-height: 1000px; box-shadow: 0px 15px 20px rgba($black, .3);
-    @include min(md){ right: auto; box-shadow: none;}
+    z-index: 3; transition-delay: .2s; right: 0;
+    @include min(md){ right: auto; }
   }
 
   .btn-menu {
-    position: absolute; top: 27px; right: 14px; height: 35px; width: 40px; color: $white;
+    position: absolute; top: 34px; right: 14px; height: 35px; width: 40px; color: $white;
     @include min(md){ display: none; }
-    i { font-size: 30px; }
+    i { font-size: 16px; }
   }
 
   ul.list-inline {
-    margin: rem(23px) rem(23px) 0; padding: 0; list-style: none; text-align: center;
+    margin: rem(23px) rem(23px) 0; padding: 0 0 0 rem(50px); list-style: none;
     @include min(md){ padding-left: rem(17px); margin: 0; }
 
-    >li { position: relative; @include icon('arrow-down');
-      @include min(md){ display: inline-block; margin-left: rem(27px); padding-right: rem(20px); }
+    >li { position: relative; @include icon('arrow-down'); display: inline-block; margin-left: rem(30px);
+      @include min(md){}
 
-      &::before { position: absolute; right: 0; color: $red; font-size: 7px; top: 17px; transform: translateY(-50%); display: none;
+      &::before { position: absolute; right: 0; color: $grey; font-size: 7px; top: 17px; transform: translateY(-50%); display: none;
         @include min(md){ display: block; color: $white; transition: .3s transform ease; top: 26px; }
       }
       &:hover {
@@ -75,74 +73,14 @@
         >a {
           @include min(md){ text-decoration: underline; opacity: 1;  }
         }
-        ul.submenu {
-          @include min(md){ display: block; max-height: 200px; }
-        }
       }
 
       >a {
-        color: $dark-blue; font-weight: 700; font-size: rem(18px); line-height:rem(40px); display: block; height: 40px; margin-bottom: rem(13px); transition: .3s color ease; @include icon('arrow-down',after);
+        color: $black; font-weight: 700; font-size: rem(14px); line-height:rem(40px); display: block; height: 40px; margin-bottom: rem(13px); transition: .3s color ease;
         @include min(md){ color: $white; font-size: rem(16px); opacity: .8; line-height: 53px; height: auto; margin-bottom: 0; margin-left: 0;}
-
-        &::after { position: relative; display: inline-block; color: $red; font-size: 7px; margin-left: rem(7px); transform: translateY(-2px); transition: .3s transform ease;
-          @include min(md){ display: none; }
-        }
 
         &:hover, &:focus {
           @include min(md){ opacity: 1; color: $white; text-decoration: underline; }
-        }
-
-        &.active {
-          &::after { transform: translateY(-2px) rotate(-180deg);}
-          + ul.submenu { display: block; }
-        }
-      }
-
-      // Submenu
-      ul.submenu { display: none; margin: 0; padding: 0; list-style: none; text-align: center; border-radius: 5px; background-color: $grey-menu; overflow: hidden;
-        @include min(md){ background-color: $white; position: absolute; left: 50%; top: 100%; width: 168px; transform: translateX(-50%); padding: 0; display: block; max-height: 0px; transition: .3s max-height linear; }
-        li { margin-left: rem(25px); margin-right: rem(25px);
-          a { color: $dark-blue; display: block; margin-bottom: rem(20px); line-height: rem(20px); font-size: rem(17px);
-            @include min(md){ text-align: left; color: $black; }
-            &:hover { font-weight: 700; text-decoration: none; }
-          }
-
-          &:first-child { margin-top: rem(25px);
-            @include min(md){ margin-top: rem(25px); }
-          }
-          &:last-child { margin-bottom: rem(25px);
-            @include min(md){ margin-bottom: rem(25px); }
-            a { margin-bottom: 0; }
-          }
-        }
-      }
-    }
-  }
-
-  .right-nav {
-    padding: 0; padding-top: rem(21px); border-top: 1px solid $grey; margin: rem(20px) 0 rem(30px); list-style: none; text-align: center;
-    @include min(md){ border: none; padding: 0; margin: 0; }
-
-    li {
-      @include min(md){ display: inline-block;}
-    }
-
-    .btn { padding-left: rem(40px); padding-right: rem(40px);
-
-      // Btn login
-      &.btn-link { margin-bottom: rem(7px);
-        @include min(md){ color: $white; margin-bottom: 0; }
-        &:hover {
-          @include min(md){ text-decoration: underline; }
-        }
-      }
-
-      // Btn Sign Up
-      &.btn-gradient { padding: rem(15px) rem(40px) rem(13px); border:none;
-        @include min(md){ color: $light-red; background: $white; border: 2px solid $white; padding: rem(13px) rem(40px) rem(11px); }
-
-        &:focus, &:hover, &:active:focus {
-          @include min(md){ background: $light-red-2; color: $white; border-color: $light-red-2; }
         }
       }
     }

@@ -2,7 +2,6 @@
 .btn {
   display: inline-block;
   background: transparent;
-  border-radius: 28px;
   border: 2px solid;
   font-size: rem(16px);
   font-weight: bold;
@@ -23,24 +22,23 @@
 
 
   &.btn-white {
-    color: $light-red; background-color: $white; border-color: $white;
-    &:focus, &:hover, &:active:focus { background-color: $light-red-2; color: $white; border-color: $light-red-2;}
+    color: $grey; background-color: $white; border-color: $white;
+    &:focus, &:hover, &:active:focus { background-color: $grey; color: $white; border-color: $grey;}
   }
-  &.btn-outline-white {
-    border: 2px solid $white; color: $white; background-color: transparent; border-color: $white;
-    &:focus, &:hover, &:active:focus { background-color: $white; color: $light-red; }
-  }
-  &.btn-gradient {
-    color: $white; background-color: $orange; background: linear-gradient(90deg, $orange 0%, $red 100%); border-color: transparent; padding: rem(15px) rem(16px) rem(13px);
-    &:focus, &:hover, &:active:focus { background-color: $orange; border-color: transparentize($primary, 0.2);}
-  }
-  &.btn-link {
-    color: $dark-blue; background-color: transparent; border-color: transparent;
-    &:focus, &:hover, &:active:focus { background-color: transparent; border-color: transparent; }
-  }
+
+
 
   &[disabled] {
     pointer-events: none; opacity: 0.5;
+  }
+}
+.btn-arrow { position: relative; display: inline-block; @include icon(arrow); height: 36px; line-height: rem(36px); font-size: rem(16px); font-weight: 500; text-transform: uppercase; letter-spacing: rem(12px); padding-right: rem(66px); color: $black;
+  &::before { position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: rem(12px); transition: .3s right ease; }
+
+  &:focus, &:hover, &:active:focus {
+    color: $black; text-decoration: none;
+
+    &::before { right: -10px; }
   }
 }
 

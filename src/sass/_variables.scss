@@ -1,25 +1,13 @@
 /* ---- Colors ---- */
-$blue:          #273c75;
-$dark-blue:     hsl(208, 49%, 24%); /* (headings) */
-$dark-blue-2:   hsl(237, 17%, 21%); /* Gradient body */
-$dark-blue-3:   hsl(237, 23%, 32%); /* Gradient body */
-$dark-grey:     hsl(207, 13%, 34%); /* (body copy) */
-$dark-grey-2:   hsl(240, 10%, 16%); /* (footer background) */
-$grey:          hsl(240, 2%, 79%); /* (footer text) */
-$light-grey:    #FEFDF9;
-$grey-menu:     #EFEFF1;
-$red:           hsl(353, 100%, 62%); /* Gradient */
-$light-red:     hsl(356, 100%, 66%); /* (CTA text) */
-$light-red-2:   hsl(355, 100%, 74%); /* (CTA hover background) */
-$green:         #79e000;
-$orange:        hsl(13, 100%, 72%); /* Gradient */
+$grey:          hsl(0, 0%, 63%);
+$dark-grey:     hsl(0, 0%, 27%);
 $white:         #FFFFFF;
 $black:         #000;
 
 // Main Colors
-$primary:     $blue;
-$secondary :  $red;
-$tertiary:    $dark-blue;
+$primary:     $black;
+$secondary :  $white;
+$tertiary:    $dark-grey;
 
 
 
