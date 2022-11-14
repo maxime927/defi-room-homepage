@@ -48,3 +48,12 @@ p {
 
 .overflow { overflow: hidden; }
 .visually-hidden { position: absolute; opacity: 0; height: 0; width: 0; overflow: hidden;}
+// Responsive displays
+.d-none { display: none; }
+.d-block { display: block; }
+.d-md-block {
+  @include min(md){ display: block; }
+}
+.d-md-none {
+  @include min(md){ display: none; }
+}

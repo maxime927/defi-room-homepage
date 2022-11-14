@@ -1,7 +1,7 @@
 /* ---- Header ---- */
 .header-wrap {
   position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: rem(32px) 0 rem(17px); margin-bottom: rem(9px);
-  @include min(md){ padding: rem(60px) 0 rem(30px); margin-bottom: rem(20px); }
+  @include min(md){ padding: rem(45px) 0 rem(30px); margin-bottom: rem(20px); }
 
   .container {
     @include min(md){ display: flex; }
@@ -20,7 +20,7 @@
 // Header logo
 .header-logo {
   width: 65px; display: block; height: 48px; margin: 0 auto; display: flex; align-items: center;
-  @include min(md){ height: auto; margin: auto; margin-left: rem(60px); margin-right: rem(20px);}
+  @include min(md){ height: auto; margin: auto; margin-left: rem(63px); margin-right: rem(15px);}
 }
 
 // Header mobile burger button
@@ -60,7 +60,7 @@
     @include min(md){ padding-left: rem(17px); margin: 0; }
 
     >li { position: relative; @include icon('arrow-down'); display: inline-block; margin-left: rem(30px);
-      @include min(md){}
+      @include min(md){ margin-left: rem(24px); }
 
       &::before { position: absolute; right: 0; color: $grey; font-size: 7px; top: 17px; transform: translateY(-50%); display: none;
         @include min(md){ display: block; color: $white; transition: .3s transform ease; top: 26px; }

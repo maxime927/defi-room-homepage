@@ -36,9 +36,13 @@
   &::before { position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: rem(12px); transition: .3s right ease; }
 
   &:focus, &:hover, &:active:focus {
-    color: $black; text-decoration: none;
+    color: $grey; text-decoration: none;
 
-    &::before { right: -10px; }
+    &::before { animation: .5s btn-arrow-hover ease; }
   }
 }
-
+@keyframes btn-arrow-hover {
+  0% { right: 0;}
+  50% {  right: -10px;}
+  100% {  right: 0;}
+}

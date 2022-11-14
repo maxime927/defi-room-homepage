@@ -32,8 +32,9 @@
     "moment": "^2.29.4",
     "path": "^0.12.7",
     "postcss": "^8.4.16",
-    "sass": "^1.54.9",
     "rellax": "^1.12.1",
+    "sass": "^1.54.9",
+    "slick-carousel": "^1.8.1",
     "webpack": "^5.74.0"
   },
   "devDependencies": {
