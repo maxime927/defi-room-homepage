@@ -60,11 +60,11 @@ $(document).ready(function () {
 
 
   // slider #1
-  const slick_1 = $(".slider-pictures ul");
+  const slick_1 = $(".slider-pictures>div");
   slick_1.slick({
     dots: false,
     fade: true,
-    asNavFor: '.slider-texts ul',
+    asNavFor: '.slider-texts>div',
     focusOnSelect: true
   });
   var slick_1_is_animating = false;
@@ -85,11 +85,11 @@ $(document).ready(function () {
 
 
   // slider #2
-  const slick_2 = $(".slider-texts ul");
+  const slick_2 = $(".slider-texts>div");
   slick_2.slick({
     dots: false,
     fade: true,
-    asNavFor: '.slider-pictures ul',
+    asNavFor: '.slider-pictures>div',
     focusOnSelect: true
   });
   var slick_2_is_animating = false;

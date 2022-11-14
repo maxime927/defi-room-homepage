@@ -6,10 +6,10 @@
     .slider-pictures {
       @include min(md){ width: calc((840vw*100)/1440); }
 
-      ul {
+      >div {
         height: 100%; margin: 0; padding: 0; list-style: none;
 
-        li {
+        >div {
           height: 100%;
 
           figure {
@@ -32,9 +32,7 @@
           position: absolute !important; bottom: 0 !important; left: 0 !important;
 
           div { height: 100%;
-            li { height: 100%;
-              figure { height: 100%; }
-            }
+            figure { height: 100%; }
           }
         }
         // Arrows navigation
@@ -54,10 +52,10 @@
       position: relative;
       @include min(md){ width: calc((600vw*100)/1440); }
 
-      ul {
+      >div {
          position: relative; margin: 0; padding: 0; list-style: none;
 
-        li {
+        >div {
           .card-wrapper {
             padding: rem(63px) rem(33px);
             @include min(md){ height: 535px; padding: rem(63px) rem(100px) rem(85px); display: flex; flex-direction: column; justify-content: center;}
